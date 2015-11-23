@@ -16,7 +16,16 @@ namespace MerulaShellProgramManager.programs
         public Program(FileInfo fileInfo)
         {
             this.fileInfo = fileInfo;
-            Name = fileInfo.Name.Remove(fileInfo.Name.Length - fileInfo.Extension.Length);
+            try
+            {
+                Name = fileInfo.Name.Remove(fileInfo.Name.Length - fileInfo.Extension.Length);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Debug.WriteLine("Skipping file without extension:  " + fileInfo.Name);
+                Name = "";
+            }
+
             Path = fileInfo.FullName;
         }
 
