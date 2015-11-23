@@ -26,8 +26,20 @@ namespace MerulaShellUi
             settings.ColorsUpdated += SettingsColorsUpdated;
             Loaded += MainWindowLoaded;
             LocationChanged += MenuWindowLocationChanged;
+            ucBattery.Text = "Test Text JISFJFSJLSF";
         }
 
+        static void SystemEvents_PowerModeChanged(object sender, Microsoft.Win32.PowerModeChangedEventArgs e)
+        {
+            PowerStatus power = SystemInformation.PowerStatus;
+            if (e.Mode == Microsoft.Win32.PowerModes.StatusChange)
+            {
+                if (pw.BatteryLifeRemaining >= 75)
+                {
+                    //Do stuff here
+                }
+            }
+        }
         void MenuWindowLocationChanged(object sender, EventArgs e)
         {
             this.DockTop();
