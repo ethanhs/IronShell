@@ -7,13 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShell", "MerulaShell\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellController", "MerulaShellController\MerulaShellController.csproj", "{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellUtilities", "MerulaShellUtilities\MerulaShellUtilities.csproj", "{376FB9C6-DC02-4D80-8F33-B9A87018253A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellProgramManager", "MerulaShellProgramManager\MerulaShellProgramManager.csproj", "{680303ED-599D-4E2E-B9D1-3EADA1FB566C}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DemoInstaller", "DemoInstaller\DemoInstaller.vdproj", "{B0FC6CFE-5DDF-4EC2-87AC-F7B6810BE00B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellUi", "MerulaShellUi\MerulaShellUi.csproj", "{40B2F6EB-DF8F-4700-A634-1EFBE68526F3}"
 EndProject
@@ -52,16 +48,6 @@ Global
 		{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}.Release|x86.ActiveCfg = Release|Any CPU
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Debug|x86.ActiveCfg = Debug|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Debug|x86.Build.0 = Debug|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Release|Any CPU.ActiveCfg = Release|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Release|Mixed Platforms.Build.0 = Release|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Release|x86.ActiveCfg = Release|x86
-		{B6602387-FD4F-4B94-87EE-1281E2C8AFA8}.Release|x86.Build.0 = Release|x86
 		{376FB9C6-DC02-4D80-8F33-B9A87018253A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{376FB9C6-DC02-4D80-8F33-B9A87018253A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{376FB9C6-DC02-4D80-8F33-B9A87018253A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -82,12 +68,6 @@ Global
 		{680303ED-599D-4E2E-B9D1-3EADA1FB566C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{680303ED-599D-4E2E-B9D1-3EADA1FB566C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{680303ED-599D-4E2E-B9D1-3EADA1FB566C}.Release|x86.ActiveCfg = Release|Any CPU
-		{B0FC6CFE-5DDF-4EC2-87AC-F7B6810BE00B}.Debug|Any CPU.ActiveCfg = Debug
-		{B0FC6CFE-5DDF-4EC2-87AC-F7B6810BE00B}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{B0FC6CFE-5DDF-4EC2-87AC-F7B6810BE00B}.Debug|x86.ActiveCfg = Debug
-		{B0FC6CFE-5DDF-4EC2-87AC-F7B6810BE00B}.Release|Any CPU.ActiveCfg = Release
-		{B0FC6CFE-5DDF-4EC2-87AC-F7B6810BE00B}.Release|Mixed Platforms.ActiveCfg = Release
-		{B0FC6CFE-5DDF-4EC2-87AC-F7B6810BE00B}.Release|x86.ActiveCfg = Release
 		{40B2F6EB-DF8F-4700-A634-1EFBE68526F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40B2F6EB-DF8F-4700-A634-1EFBE68526F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40B2F6EB-DF8F-4700-A634-1EFBE68526F3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
