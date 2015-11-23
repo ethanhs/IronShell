@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40B2F6EB-DF8F-4700-A634-1EFBE68526F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MerulaShellUi</RootNamespace>
+    <AssemblyName>MerulaShellUi</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MerulaShell.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MerulaShellUi.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ColorPicker">
+      <HintPath>..\ColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="colorpicker\ColorPicker.xaml.cs">
+      <DependentUpon>ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="colorpicker\ColorPickerSelector.xaml.cs">
+      <DependentUpon>ColorPickerSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="colorpicker\ColorSelector.xaml.cs">
+      <DependentUpon>ColorSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="colorpicker\HsbValueConverter.cs" />
+    <Compile Include="Desktop.xaml.cs">
+      <DependentUpon>Desktop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="desktop\DesktopButton.xaml.cs">
+      <DependentUpon>DesktopButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dock\Docking.cs" />
+    <Compile Include="dock\LocationMenu.xaml.cs">
+      <DependentUpon>LocationMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dock\ProgramMenu.xaml.cs">
+      <DependentUpon>ProgramMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dock\SettingsControl.xaml.cs">
+      <DependentUpon>SettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dock\ShutdownMenu.xaml.cs">
+      <DependentUpon>ShutdownMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="dock\SlideMenu.xaml.cs">
+      <DependentUpon>SlideMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="images\GearIcon.xaml.cs">
+      <DependentUpon>GearIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="images\HibernateIcon.xaml.cs">
+      <DependentUpon>HibernateIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="images\LocationIcon.xaml.cs">
+      <DependentUpon>LocationIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="images\Programs.xaml.cs">
+      <DependentUpon>Programs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="images\RestartIcon.xaml.cs">
+      <DependentUpon>RestartIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="images\ShutdownIcon.xaml.cs">
+      <DependentUpon>ShutdownIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuWindow.xaml.cs">
+      <DependentUpon>MenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="menu\Clock.xaml.cs">
+      <DependentUpon>Clock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SharedSettings.cs" />
+    <Compile Include="tasks\Task.xaml.cs">
+      <DependentUpon>Task.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="tasks\Taskbar.xaml.cs">
+      <DependentUpon>Taskbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="workspace\WorkspaceSetter.cs" />
+    <Page Include="colorpicker\ColorPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="colorpicker\ColorPickerSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="colorpicker\ColorSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="defaultStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Desktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="desktop\DesktopButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dock\LocationMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dock\ProgramMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dock\SettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dock\ShutdownMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="dock\SlideMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="images\GearIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="images\HibernateIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="images\LocationIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="images\Programs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="images\RestartIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="images\ShutdownIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="menu\Clock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TaskWindow.xaml.cs">
+      <DependentUpon>TaskWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="tasks\Task.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="tasks\Taskbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MerulaShellController\MerulaShellController.csproj">
+      <Project>{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}</Project>
+      <Name>MerulaShellController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MerulaShellProgramManager\MerulaShellProgramManager.csproj">
+      <Project>{680303ED-599D-4E2E-B9D1-3EADA1FB566C}</Project>
+      <Name>MerulaShellProgramManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MerulaShellUtilities\MerulaShellUtilities.csproj">
+      <Project>{376FB9C6-DC02-4D80-8F33-B9A87018253A}</Project>
+      <Name>MerulaShellUtilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MerulaShell\MerulaShell.csproj">
+      <Project>{D86206AD-620E-4CE4-A6F0-D2554CD7EC30}</Project>
+      <Name>MerulaShell</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Folder_Open.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Image1.png" />
+    <Resource Include="images\Image2.png" />
+    <Resource Include="images\merulashell.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MerulaShell.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

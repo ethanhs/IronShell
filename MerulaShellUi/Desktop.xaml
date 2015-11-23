@@ -1,0 +1,10 @@
+﻿<Window x:Class="MerulaShellUi.Desktop"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Desktop" Height="300" Width="300" WindowStyle="None" ResizeMode="NoResize" MouseEnter="WindowMouseEnter" MouseLeave="WindowMouseLeave" Closing="WindowClosing">
+    <Border Name="root" Opacity="0">
+        <UniformGrid Rows="0" Columns="0" VerticalAlignment="Center" HorizontalAlignment="Center" Name="pnlShortcuts">
+
+        </UniformGrid>
+    </Border>
+</Window>

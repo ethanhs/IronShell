@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MerulaShell.windows.Thumbnail">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="MerulaShell.windows.Thumbnail.PSIZE" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>windows\Thumbnail.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="MerulaShell.windows.Thumbnail.DWM_THUMBNAIL_PROPERTIES" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>windows\Thumbnail.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="MerulaShell.windows.Thumbnail.Rect" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>windows\Thumbnail.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AiAAAACACAACAAQAgAAAAIAACAAAAAAAAgAAAAIAECQ=</HashCode>
+      <FileName>windows\Thumbnail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MerulaShell.windows.Window">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAAEAEQgAJAEACEJAACAAAAABAASAQAAAIIADgAgA=</HashCode>
+      <FileName>windows\Window.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Thumbnail" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MerulaShell.windows.WindowCenter">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="MerulaShell.windows.WindowCenter.EnumWindowsCallback" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>windows\WindowCenter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAAAiwBAIAAAAACIAAhAEEEAgQAiAAAARgAQASAQAI=</HashCode>
+      <FileName>windows\WindowCenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MerulaShell.MerulaShell">
+    <Position X="8.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgACAAAAAACCAAAAAAAEBAAACAEAAAAAAAAAAAA=</HashCode>
+      <FileName>MerulaShell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

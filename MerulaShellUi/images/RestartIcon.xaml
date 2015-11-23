@@ -1,0 +1,12 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="MerulaShellUi.RestartIcon"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<Path x:Name="Shape_1" Data="F1M86.134,1.513C86.134,1.513 150.988,41.661 150.988,41.661 150.988,41.661 86.134,81.81 86.134,81.81 86.134,81.81 86.134,73.968 86.134,63.186L86.134,56.904 84.344,56.995C53.975,60.088 30.2,85.811 30.2,116.983 30.2,150.232 57.251,177.282 90.5,177.282 123.749,177.282 150.8,150.232 150.8,116.983 150.8,116.983 179.904,116.983 179.904,116.983 179.904,166.28 139.798,206.387 90.5,206.387 41.202,206.387 1.096,166.28 1.096,116.983 1.096,70.766 36.345,32.628 81.372,28.041L86.134,27.8 86.134,26.919C86.134,12.805,86.134,1.513,86.134,1.513z" Fill="{Binding Foreground, ElementName=UserControl}" Margin="0" Stretch="Fill"/>
+</UserControl>

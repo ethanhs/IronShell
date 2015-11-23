@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="MerulaShellUi.tasks.Task"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Margin="3,3,3,5">
+    <ToggleButton Name="btnMain" Click="BtnMainClick" MouseEnter="BtnMainMouseEnter" MouseLeave="BtnMainMouseLeave" Style="{DynamicResource TaskButtonStyle}" BorderBrush="White">
+    <Grid>
+        <Grid Name="infoHolder">
+            <Image Name="imgIcon16" Margin="3" Height="16" Width="16" VerticalAlignment="Top" HorizontalAlignment="Left" ></Image>
+            <TextBlock Name="taskLabel" ToolTip="{Binding ElementName=taskLabel, Path=Text}" Text="test" Margin="23,3,3,3" VerticalAlignment="Top" TextTrimming="CharacterEllipsis" />
+                <Button Name="btnClose" Click="BtnCloseClick" Visibility="Collapsed" Height="16" Width="16"  VerticalAlignment="Top" Margin="3" HorizontalAlignment="Right" Style="{DynamicResource CloseButton}" Background="White" />
+            </Grid>
+        <Border Name="bdrThumb" Margin="1,21,1,1">
+            
+        </Border>
+        <Image Name="imgIcon32" Visibility="Collapsed" ToolTip="{Binding ElementName=taskLabel, Path=Text}" ></Image>
+    </Grid>
+    </ToggleButton>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MerulaShellUi.dock.ShutdownMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:MerulaShellUi="clr-namespace:MerulaShellUi" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="300">
+    <StackPanel>
+        <Button Name="btnShutdown" Margin="10" Padding="10" FontSize="23" Click="BtnShutdownClick" >
+            <WrapPanel Width="250">
+                <MerulaShellUi:ShutdownIcon Height="48" Width="48" Margin="0,0,30,0" />
+                <TextBlock VerticalAlignment="Center">Shutdown</TextBlock>
+            </WrapPanel>
+        </Button>
+        <Button Name="btnRestart" Margin="10" Padding="10" FontSize="23" Click="BtnRestartClick">
+            <WrapPanel Width="250">
+                <MerulaShellUi:RestartIcon Height="48" Width="48" Margin="0,0,30,0" />
+                <TextBlock VerticalAlignment="Center">Restart</TextBlock>
+            </WrapPanel>
+        </Button>
+        <Button Name="btnHibernate" Margin="10" Padding="10" FontSize="23" Click="BtnHibernateClick">
+            <WrapPanel Width="250">
+                <MerulaShellUi:HibernateIcon Height="48" Width="48" Margin="0,0,30,0" />
+                <TextBlock VerticalAlignment="Center">Hibernate</TextBlock>
+            </WrapPanel>
+        </Button>
+    </StackPanel>
+</UserControl>

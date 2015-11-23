@@ -1,0 +1,12 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="MerulaShellUi.ShutdownIcon"
+	x:Name="UserControl"
+	d:DesignWidth="640" d:DesignHeight="480">
+
+	<Path x:Name="Shape_1" Data="F1M134.17,33.779C137.576,37.535 140.618,41.644 143.213,45.992 150.256,57.794 153.979,71.33 153.979,85.138 153.979,127.308 119.671,161.616 77.5,161.616 35.329,161.616 1.021,127.308 1.021,85.138 1.021,71.37 4.724,57.867 11.729,46.089 14.315,41.741 17.35,37.63 20.748,33.87 20.748,33.87 39.213,50.56 39.213,50.56 36.917,53.1 34.867,55.877 33.121,58.813 28.404,66.744 25.911,75.847 25.911,85.138 25.911,113.584 49.054,136.726 77.5,136.726 105.946,136.726 129.089,113.584 129.089,85.138 129.089,75.82 126.583,66.694 121.84,58.747 120.088,55.811 118.033,53.036 115.732,50.498 115.732,50.498 134.17,33.779 134.17,33.779z M65.055,1.384C65.055,1.384 89.945,1.384 89.945,1.384 89.945,1.384 89.945,73.15 89.945,73.15 89.945,73.15 65.055,73.15 65.055,73.15 65.055,73.15 65.055,1.384 65.055,1.384z" Fill="{Binding Foreground, ElementName=UserControl}" Margin="0" Stretch="Fill"/>
+</UserControl>

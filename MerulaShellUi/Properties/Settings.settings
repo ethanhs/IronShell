@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MerulaShellUi.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UIColor" Type="System.Windows.Media.Color" Scope="User">
+      <Value Profile="(Default)">#FFFFFFFF</Value>
+    </Setting>
+    <Setting Name="UIColorFore" Type="System.Windows.Media.Color" Scope="User">
+      <Value Profile="(Default)">#FF000000</Value>
+    </Setting>
+    <Setting Name="TaskbarAlwaysVisible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TaskbarHeight" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">32</Value>
+    </Setting>
+    <Setting Name="Glass" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">250</Value>
+    </Setting>
+    <Setting Name="DesktopImage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pack://application:,,,/MerulaShellUi;component/images/merulashell.png</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
