@@ -1,4 +1,5 @@
 ﻿using System;
+using SystemInfo;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -26,19 +27,14 @@ namespace MerulaShellUi
             settings.ColorsUpdated += SettingsColorsUpdated;
             Loaded += MainWindowLoaded;
             LocationChanged += MenuWindowLocationChanged;
-            ucBattery.Text = "Test Text JISFJFSJLSF";
-        }
-
-        static void SystemEvents_PowerModeChanged(object sender, Microsoft.Win32.PowerModeChangedEventArgs e)
-        {
-            PowerStatus power = SystemInformation.PowerStatus;
-            if (e.Mode == Microsoft.Win32.PowerModes.StatusChange)
+            var Battery =  new SystemInfo.SystemInfo();
+            if (Battery.BatteryConnected == true)
             {
-                if (pw.BatteryLifeRemaining >= 75)
-                {
-                    //Do stuff here
-                }
+                ucBattery.Text = "Battery Remaining: " + Battery.BatteryPercent +"%";
+            } else {
+                ucBattery.Text = "";
             }
+            
         }
         void MenuWindowLocationChanged(object sender, EventArgs e)
         {

@@ -18,6 +18,7 @@
     <WarningLevel>4</WarningLevel>
     <Utf8Output>true</Utf8Output>
     <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,7 +31,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -72,6 +72,7 @@
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Interactivity" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -295,6 +296,10 @@
     <ProjectReference Include="..\MerulaShell\MerulaShell.csproj">
       <Project>{D86206AD-620E-4CE4-A6F0-D2554CD7EC30}</Project>
       <Name>MerulaShell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SystemInfo\SystemInfo.vbproj">
+      <Project>{521c22f5-71a3-4453-b359-af46b73c6cfa}</Project>
+      <Name>SystemInfo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
