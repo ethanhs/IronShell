@@ -72,6 +72,7 @@
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Windows.Interactivity" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -142,6 +143,9 @@
     </Compile>
     <Compile Include="MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="menu\Battery.xaml.cs">
+      <DependentUpon>Battery.xaml</DependentUpon>
     </Compile>
     <Compile Include="menu\Clock.xaml.cs">
       <DependentUpon>Clock.xaml</DependentUpon>
@@ -223,6 +227,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MenuWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="menu\Battery.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
