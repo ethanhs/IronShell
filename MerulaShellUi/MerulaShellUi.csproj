@@ -150,6 +150,9 @@
     <Compile Include="menu\Clock.xaml.cs">
       <DependentUpon>Clock.xaml</DependentUpon>
     </Compile>
+    <Compile Include="menu\Wifi.xaml.cs">
+      <DependentUpon>Wifi.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SharedSettings.cs" />
     <Compile Include="tasks\Task.xaml.cs">
       <DependentUpon>Task.xaml</DependentUpon>
@@ -235,6 +238,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="menu\Clock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="menu\Wifi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

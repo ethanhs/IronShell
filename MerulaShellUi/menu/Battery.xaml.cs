@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,7 +39,7 @@ namespace MerulaShellUi.menu
 
         private void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            this.Dispatcher.Invoke((Action)(() =>
+            this.Dispatcher.Invoke((Action)(() => //assures that we can update out of thread?
             {
                 ucBattery.Text = "Battery Remaining: " + GetBatteryPercent() + "%";
             }));
@@ -47,30 +48,38 @@ namespace MerulaShellUi.menu
 
         private string GetBatteryPercent()
         {
-            var scope = new ManagementScope();
-            SelectQuery query = new SelectQuery("Select EstimatedChargeRemaining From Win32_Battery");
-            using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query))
+            try
             {
-                using (ManagementObjectCollection objectCollection = searcher.Get())
+                var scope = new ManagementScope();
+                SelectQuery query = new SelectQuery("Select EstimatedChargeRemaining From Win32_Battery");
+                using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(scope, query))
                 {
-                    foreach (ManagementObject mObj in objectCollection)
-                    //this nugget has a lot of info see here: https://msdn.microsoft.com/en-us/library/windows/desktop/aa394074%28v=vs.85%29.aspx
+                    using (ManagementObjectCollection objectCollection = searcher.Get())
                     {
-                        PropertyData pData = mObj.Properties["EstimatedChargeRemaining"];
-                        var val = pData.Value;
-                        if ((ushort) val > (ushort) 100)
+                        foreach (ManagementObject mObj in objectCollection)
+                            //this nugget has a lot of info see here: https://msdn.microsoft.com/en-us/library/windows/desktop/aa394074%28v=vs.85%29.aspx
                         {
-                            return "100";
+                            PropertyData pData = mObj.Properties["EstimatedChargeRemaining"];
+                            var val = pData.Value;
+                            if ((ushort) val > (ushort) 100)
+                            {
+                                return "100";
+                            }
+                            else
+                            {
+                                return pData.Value.ToString();
+                            }
+
                         }
-                        else
-                        {
-                            return pData.Value.ToString();
-                        }
-                        
                     }
                 }
+                return "Unk";
             }
-            return "Unk %";
+            catch (Exception e)
+            {
+                Debug.WriteLine(e);
+                return "Unk";
+            }
         }
     }
 }
