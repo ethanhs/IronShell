@@ -1,4 +1,5 @@
 ﻿using System;
+using SystemInfo;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -26,8 +27,15 @@ namespace MerulaShellUi
             settings.ColorsUpdated += SettingsColorsUpdated;
             Loaded += MainWindowLoaded;
             LocationChanged += MenuWindowLocationChanged;
+            var Battery =  new SystemInfo.SystemInfo();
+            if (Battery.BatteryConnected == true)
+            {
+                ucBattery.Text = "Battery Remaining: " + Battery.BatteryPercent +"%";
+            } else {
+                ucBattery.Text = "";
+            }
+            
         }
-
         void MenuWindowLocationChanged(object sender, EventArgs e)
         {
             this.DockTop();
