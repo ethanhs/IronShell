@@ -21,7 +21,7 @@ namespace MerulaShellUi
             MessageBox.Show("Welcome to ShellSharp.\n\n" +
                                 "This is a demo and the windows shell is temporary replaced with the MerulaShell. If you want the old Windows back, please go to start -> Explorer.\n\n" +
                                 "Have fun and good luck with ShellSharp.");
-            KillExplorer();
+            //KillExplorer();
 
             var thisProc = Process.GetCurrentProcess();
             if (Process.GetProcessesByName(thisProc.ProcessName).Length > 1)
@@ -44,6 +44,7 @@ namespace MerulaShellUi
                     proc.Kill();
                     proc.WaitForExit();
                 }
+                key.SetValue("AutoRestartShell", 0);
             }
         }
     }
