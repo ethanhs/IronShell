@@ -1,0 +1,42 @@
+﻿<Window x:Class="MerulaShellUi.start.StartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MerulaShellUi.start"
+        xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Width="640"
+        Left="-10"
+        Top="20"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Name="Start"
+        KeyDown="StartWindow_OnKeyDown"
+        ShowInTaskbar="False"
+        >
+    <Grid>
+        <ScrollViewer Name="ProgramParent" HorizontalScrollBarVisibility="Hidden" CanContentScroll="True" Width="180" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <StackPanel Name="ProgramList" Width="150" HorizontalAlignment="Left" Margin="5,0,0,0"></StackPanel>
+        </ScrollViewer>
+        
+        <StackPanel Name="AllPrograms" Width="150" HorizontalAlignment="Left" Margin="5,0,0,0">
+            <metro:Tile Name="AllApps" Height="40" Width="Auto" Background="Transparent" Click="AllApps_OnClick">
+                <TextBlock VerticalAlignment="Center" FontSize="20">All Apps</TextBlock>
+            </metro:Tile>            
+            <metro:Tile Name="Explore10" Height="40" Width="Auto" Background="Transparent" Click="Explore10_OnClick">
+                <TextBlock VerticalAlignment="Center" FontSize="20">Explore10</TextBlock>
+            </metro:Tile>
+            <metro:Tile Name="Explorer" Height="40" Width="Auto" Background="Transparent" Click="Explorer_OnClick">
+                <TextBlock VerticalAlignment="Center" FontSize="20">Explorer</TextBlock>
+            </metro:Tile>
+            
+            
+
+        </StackPanel>
+        <WrapPanel Name="TilesView">
+            
+        </WrapPanel>
+      
+    </Grid>
+</Window>

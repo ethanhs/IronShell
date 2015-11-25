@@ -67,7 +67,7 @@ namespace MerulaShellUi.menu
                             }
                             else
                             {
-                                return pData.Value.ToString();
+                                return val.ToString().Replace("%",""); //strip % in case it duplicates
                             }
 
                         }

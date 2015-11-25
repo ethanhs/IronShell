@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -6,6 +7,7 @@ using System.Windows.Interop;
 using System.Windows.Media;
 using MerulaShellController.ManageWindows;
 using MerulaShellUi.dock;
+using MerulaShellUi.start;
 
 namespace MerulaShellUi
 {
@@ -127,11 +129,20 @@ namespace MerulaShellUi
             if (programOpen)
             {
                 programOpen = false;
+                foreach (var win in Application.Current.Windows)
+                {
+                    var window = ((Window)win);
+                    if (window.Name == "Start")
+                    {
+                        window.Close();
+                    }
+                }
                 return;
             }
-            var programs = new ProgramMenu();
-            programMenu = new SlideMenu(Dock.Top) { InnerControl = programs };
+            var start = new StartWindow();
+            start.Show();
             programOpen = true;
+
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

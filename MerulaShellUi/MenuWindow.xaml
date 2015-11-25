@@ -1,50 +1,50 @@
 ﻿<Window x:Class="MerulaShellUi.MenuWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:menu="clr-namespace:MerulaShellUi.menu" xmlns:MerulaShellUi="clr-namespace:MerulaShellUi" Title="Menu" Height="25" Width="720"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:metro="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro" xmlns:menu="clr-namespace:MerulaShellUi.menu" xmlns:MerulaShellUi="clr-namespace:MerulaShellUi" Title="Menu" Height="25" Width="720"
         Topmost="True" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" ShowInTaskbar="False" Closing="Window_Closing" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="47" />
+            <ColumnDefinition Width="70" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="1" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" >
-            <Button Name="btnPrograms" VerticalAlignment="Center" Margin="1,1,10,1" MouseEnter="SettingsMouseEnter" Click="ProgramsClick" Style="{DynamicResource MenuButton}">
-                <WrapPanel>
-                    <MerulaShellUi:Programs Height="16" Width="16" Margin="2" />
+            <metro:Tile Height="32" Width="61" Name="btnPrograms" VerticalAlignment="Center" Margin="1,-4,10,-4" MouseEnter="SettingsMouseEnter" Click="ProgramsClick" Style="{DynamicResource MenuButton}">
+                <WrapPanel VerticalAlignment="Center" Margin="0,2,0,0">
+                    <MerulaShellUi:Programs VerticalAlignment="Center" Width="24" Height="24" Margin="0,0,2,0"/>
                     <TextBlock VerticalAlignment="Center">Start</TextBlock>
                 </WrapPanel>
-            </Button>
-            <Button Name="btnLocation" VerticalAlignment="Center" Margin="1,1,10,1" MouseEnter="SettingsMouseEnter" Click="LocationClick" Style="{DynamicResource MenuButton}">
-                <WrapPanel>
-                    <MerulaShellUi:LocationIcon Height="16" Width="16" Margin="2" />
-                    <TextBlock VerticalAlignment="Center">Locations</TextBlock>
+            </metro:Tile>
+            <metro:Tile Height="30" Width="80" Name="btnLocation" VerticalAlignment="Center" Margin="1,1,10,1" MouseEnter="SettingsMouseEnter" Click="LocationClick" Style="{DynamicResource MenuButton}">
+                <WrapPanel VerticalAlignment="Center">
+                    <MerulaShellUi:LocationIcon VerticalAlignment="Center" Height="22" Width="24" Margin="2,0,2,0"/>
+                    <TextBlock VerticalAlignment="Center">Folders</TextBlock>
                 </WrapPanel>
-            </Button>
-            <Button Name="btnSettings" VerticalAlignment="Center" Margin="1,1,10,1" MouseEnter="SettingsMouseEnter" Click="SettingsClick" Style="{DynamicResource MenuButton}">
-                <WrapPanel>
+            </metro:Tile>
+            <metro:Tile Height="30" Width="70" Name="btnSettings" VerticalAlignment="Center" Margin="1,1,10,1" MouseEnter="SettingsMouseEnter" Click="SettingsClick" Style="{DynamicResource MenuButton}">
+                <WrapPanel VerticalAlignment="Center">
                     <MerulaShellUi:GearIcon Height="16" Width="16" Margin="2" />
                     <TextBlock VerticalAlignment="Center">Settings</TextBlock>
                 </WrapPanel>
-            </Button>
-            <Button Name="btnShutdown" VerticalAlignment="Center" Margin="1,1,10,1" MouseEnter="SettingsMouseEnter"  Click="ShutdownClick" Style="{DynamicResource MenuButton}">
-                <WrapPanel>
+            </metro:Tile>
+            <metro:Tile Height="30" Width="80" Name="btnShutdown" VerticalAlignment="Center" Margin="1,1,10,1" MouseEnter="SettingsMouseEnter"  Click="ShutdownClick" Style="{DynamicResource MenuButton}">
+                <WrapPanel VerticalAlignment="Center">
                     <MerulaShellUi:ShutdownIcon Height="16" Width="16" Margin="2" />
                     <TextBlock VerticalAlignment="Center">Shutdown</TextBlock>
                 </WrapPanel>
-            </Button>
+            </metro:Tile>
         </StackPanel>
-        <StackPanel Name="Widgets" HorizontalAlignment="Right" Orientation="Horizontal">
+        <StackPanel Name="Widgets" HorizontalAlignment="Right" Orientation="Horizontal" Width="223">
             <DockPanel Margin="0,0,5,0">
                 <menu:Battery VerticalAlignment="Center" Margin="0,0,5,0"/>
                 <menu:Wifi VerticalAlignment="Center" DockPanel.Dock="Left"/>
             </DockPanel>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Column="1" Width="47">
-            <menu:Clock x:Name="ucClock"  VerticalAlignment="Center" HorizontalAlignment="Left" Width="47" Margin="0,4" />
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Column="1" Width="52">
+            <menu:Clock x:Name="ucClock" VerticalAlignment="Center" HorizontalAlignment="Left" Width="49" Margin="0,0,5,0"/>
         </StackPanel>
         <Border Grid.Row="1" Name="windowBorder" Grid.ColumnSpan="2" />
     </Grid>

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using MerulaShell.windows;
 using Window = MerulaShell.windows.Window;
 
@@ -21,9 +23,9 @@ namespace MerulaShellUi.tasks
 
         public void SetColors()
         {
-            btnMain.Background = settings.UiForeBrush;
+            btnMain.Background = Brushes.Transparent;
             btnClose.Background = settings.UiForeBrush;
-            btnMain.BorderBrush = settings.UiForeBrush;
+            btnMain.BorderBrush = Brushes.Transparent;
             taskLabel.Foreground = settings.UiForeBrush;
         }
 

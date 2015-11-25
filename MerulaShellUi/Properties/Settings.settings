@@ -12,7 +12,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="TaskbarHeight" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">32</Value>
+      <Value Profile="(Default)">40</Value>
     </Setting>
     <Setting Name="Glass" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">250</Value>

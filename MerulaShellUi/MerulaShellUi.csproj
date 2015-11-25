@@ -68,12 +68,15 @@
     <Reference Include="ColorPicker">
       <HintPath>..\ColorPicker.dll</HintPath>
     </Reference>
+    <Reference Include="MahApps.Metro, Version=1.1.2.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Explore10\Explore10\MahApps.Metro\MahApps.Metro.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions" />
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Interactivity" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -154,6 +157,10 @@
       <DependentUpon>Wifi.xaml</DependentUpon>
     </Compile>
     <Compile Include="SharedSettings.cs" />
+    <Compile Include="start\Search.cs" />
+    <Compile Include="start\StartWindow.xaml.cs">
+      <DependentUpon>StartWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="tasks\Task.xaml.cs">
       <DependentUpon>Task.xaml</DependentUpon>
     </Compile>
@@ -245,6 +252,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="start\StartWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TaskWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -295,6 +306,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Explore10\Explore10\Explore10.csproj">
+      <Project>{11699250-153f-4ff0-a89c-54f012cf2466}</Project>
+      <Name>Explore10</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MerulaShellController\MerulaShellController.csproj">
       <Project>{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}</Project>
       <Name>MerulaShellController</Name>
@@ -338,6 +353,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="start\Everything32.dll" />
+    <Content Include="start\Everything64.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -41,7 +41,7 @@ namespace MerulaShellUi.menu
         {
             this.Dispatcher.Invoke((Action) (() => //assures that we can update out of thread?
             {
-                ucWifi.Text = "Wifi Signal: " + GetWifiSignal() + "%";
+                ucWifi.Text = "Wifi Signal: " + GetWifiSignal();
             }));
         }
 
