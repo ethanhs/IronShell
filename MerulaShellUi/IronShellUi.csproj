@@ -310,21 +310,21 @@
       <Project>{11699250-153f-4ff0-a89c-54f012cf2466}</Project>
       <Name>Explore10</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MerulaShellController\MerulaShellController.csproj">
+    <ProjectReference Include="..\MerulaShellController\IronShellController.csproj">
       <Project>{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}</Project>
-      <Name>MerulaShellController</Name>
+      <Name>IronShellController</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MerulaShellProgramManager\MerulaShellProgramManager.csproj">
+    <ProjectReference Include="..\MerulaShellProgramManager\IronShellProgramManager.csproj">
       <Project>{680303ED-599D-4E2E-B9D1-3EADA1FB566C}</Project>
-      <Name>MerulaShellProgramManager</Name>
+      <Name>IronShellProgramManager</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MerulaShellUtilities\MerulaShellUtilities.csproj">
+    <ProjectReference Include="..\MerulaShellUtilities\IronShellUtilities.csproj">
       <Project>{376FB9C6-DC02-4D80-8F33-B9A87018253A}</Project>
-      <Name>MerulaShellUtilities</Name>
+      <Name>IronShellUtilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MerulaShell\MerulaShell.csproj">
+    <ProjectReference Include="..\MerulaShell\IronShell.csproj">
       <Project>{D86206AD-620E-4CE4-A6F0-D2554CD7EC30}</Project>
-      <Name>MerulaShell</Name>
+      <Name>IronShell</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -355,8 +355,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="start\Everything32.dll" />
-    <Content Include="start\Everything64.dll" />
+    <Content Include="start\es.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="start\Everything.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

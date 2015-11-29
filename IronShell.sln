@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellUi", "MerulaShellUi\MerulaShellUi.csproj", "{40B2F6EB-DF8F-4700-A634-1EFBE68526F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronShellUi", "MerulaShellUi\IronShellUi.csproj", "{40B2F6EB-DF8F-4700-A634-1EFBE68526F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShell", "MerulaShell\MerulaShell.csproj", "{D86206AD-620E-4CE4-A6F0-D2554CD7EC30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronShell", "MerulaShell\IronShell.csproj", "{D86206AD-620E-4CE4-A6F0-D2554CD7EC30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellController", "MerulaShellController\MerulaShellController.csproj", "{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronShellController", "MerulaShellController\IronShellController.csproj", "{00B88B3D-78EA-4BC2-8C8A-BA94EF240747}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellUtilities", "MerulaShellUtilities\MerulaShellUtilities.csproj", "{376FB9C6-DC02-4D80-8F33-B9A87018253A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronShellUtilities", "MerulaShellUtilities\IronShellUtilities.csproj", "{376FB9C6-DC02-4D80-8F33-B9A87018253A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerulaShellProgramManager", "MerulaShellProgramManager\MerulaShellProgramManager.csproj", "{680303ED-599D-4E2E-B9D1-3EADA1FB566C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronShellProgramManager", "MerulaShellProgramManager\IronShellProgramManager.csproj", "{680303ED-599D-4E2E-B9D1-3EADA1FB566C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9B1DB68-F7EC-4B2C-9852-1824332F4465}"
 	ProjectSection(SolutionItems) = preProject

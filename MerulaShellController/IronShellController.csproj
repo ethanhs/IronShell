@@ -59,13 +59,13 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MerulaShellProgramManager\MerulaShellProgramManager.csproj">
+    <ProjectReference Include="..\MerulaShellProgramManager\IronShellProgramManager.csproj">
       <Project>{680303ed-599d-4e2e-b9d1-3eada1fb566c}</Project>
-      <Name>MerulaShellProgramManager</Name>
+      <Name>IronShellProgramManager</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MerulaShell\MerulaShell.csproj">
+    <ProjectReference Include="..\MerulaShell\IronShell.csproj">
       <Project>{d86206ad-620e-4ce4-a6f0-d2554cd7ec30}</Project>
-      <Name>MerulaShell</Name>
+      <Name>IronShell</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

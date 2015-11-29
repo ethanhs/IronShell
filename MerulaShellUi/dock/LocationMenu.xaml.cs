@@ -60,7 +60,9 @@ namespace MerulaShellUi.dock
 
         private void btnLocation_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            ((IoItem) ((Button) sender).Tag).Start();
+            var win = new Explore10.MainWindow( ((IoItem)((Button) sender).Tag).Path);
+            win.Show();
+
         }
     }
 }

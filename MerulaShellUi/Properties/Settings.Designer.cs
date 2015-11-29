@@ -94,5 +94,16 @@ namespace MerulaShellUi.Properties {
                 this["DesktopImage"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.ListDictionary Tiles {
+            get {
+                return ((global::System.Collections.Specialized.ListDictionary)(this["Tiles"]));
+            }
+            set {
+                this["Tiles"] = value;
+            }
+        }
     }
 }

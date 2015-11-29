@@ -16,6 +16,7 @@ using Explore10;
 using MahApps.Metro;
 using MahApps.Metro.Controls;
 using System.IO;
+using MerulaShellProgramManager.programs;
 using MerulaShellProgramManager.shell;
 
 namespace MerulaShellUi.start
@@ -56,6 +57,10 @@ namespace MerulaShellUi.start
         {
             TilesView.Visibility=Visibility.Hidden;
             _searchText += e.Key;
+            var ret= start.Search.GetSearchResults(_searchText);
+            Debug.WriteLine(ret);
+
+
             
         }
 
@@ -183,10 +188,10 @@ namespace MerulaShellUi.start
 
         }
 
-        private void Search(string str)
+
+        private void StartWindow_OnLostFocus(object sender, RoutedEventArgs e)
         {
-            start.Search.Everything_SetSearchW(str);
-            var res = start.Search.Everything_QueryW(true);
+            Hide();
         }
     }
 }

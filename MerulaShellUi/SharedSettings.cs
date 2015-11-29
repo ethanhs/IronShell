@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Windows;
 using System.Windows.Media;
 
@@ -104,6 +106,22 @@ namespace MerulaShellUi
             }
         }
 
+        public ListDictionary Tiles
+        {
+            get { return Properties.Settings.Default.Tiles; }
+            set
+            {
+                if (Equals(Properties.Settings.Default.Tiles, null))
+                {
+                    Properties.Settings.Default.Tiles = new ListDictionary();
+                }
+                else
+                {
+                    if (!Equals(null, value))
+                    Properties.Settings.Default.Tiles=value;
+                }
+            }
+        } 
         public event EventHandler WallpaperChanged;
 
         public void InvokeWallpaperChanged(EventArgs e)

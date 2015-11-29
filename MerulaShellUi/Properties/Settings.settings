@@ -20,5 +20,8 @@
     <Setting Name="DesktopImage" Type="System.String" Scope="User">
       <Value Profile="(Default)">pack://application:,,,/MerulaShellUi;component/images/merulashell.png</Value>
     </Setting>
+    <Setting Name="Tiles" Type="System.Collections.Specialized.ListDictionary" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -1,5 +1,7 @@
 ﻿
 using System;
+using System.Collections.Specialized;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using MerulaShellUi.colorpicker;
@@ -155,6 +157,26 @@ namespace MerulaShellUi.dock
             if (dialog.FileName != string.Empty)
                 settings.Wallpaper = dialog.FileName;
             RemoveFreeze();
+        }
+
+        private void BtnPinTiles(object sender, RoutedEventArgs e)
+        {
+            ((SlideMenu)((Decorator)Parent).Parent).FreezeSlideUp = true;
+            var tile= new ListDictionary();
+            MessageBox.Show("Please select the file you would like to run.");
+            var dialog = new OpenFileDialog();
+            dialog.ShowDialog();
+            if (dialog.FileName != string.Empty)
+            {
+                tile.Add("Program", dialog.FileName);
+            }
+            var res = MessageBox.Show("Please choose the image you would like to use. If you would like to use the normal program's icon, close this dialog.");
+            if (res.Equals(MessageBoxResult.Cancel))
+            {
+                var colorpick = new colorpicker.ColorPickerSelector();
+            }
+
+
         }
     }
 }

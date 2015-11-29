@@ -1,4 +1,4 @@
-#SharpShell
+#IronShell
 
 This is a C# shell replacement for Windows Explorer
 

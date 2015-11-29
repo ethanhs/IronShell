@@ -19,6 +19,8 @@
             <Slider Name="slGlass" Margin="5" Maximum="255" Minimum="1"></Slider>
             <CheckBox Margin="5" Visibility="Collapsed" Name="cbHideTaskbar" >Hide taskbar</CheckBox>
             <Button Name="btnWallpaper" Margin="5" Padding="5" Click="SetWallpaperClick">Set wallpaper</Button>
+            <Button Name="btnPinTiles" Margin="5" Padding="5" Click="BtnPinTiles">Pin Tiles to Start</Button>
+            
         </StackPanel>
     </Grid>
 </UserControl>

@@ -97,152 +97,51 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-	<Style x:Key="CloseButton" TargetType="{x:Type Button}">
-		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
-		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
-		<Setter Property="BorderThickness" Value="1"/>
-		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center"/>
-		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Padding" Value="1"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Grid x:Name="grid" Margin="-4.188,-0.312,-0.062,-3.875" Opacity="0.495">
-						<VisualStateManager.VisualStateGroups>
-							<VisualStateGroup x:Name="CommonStates" ei:ExtendedVisualStateManager.UseFluidLayout="True">
-								<VisualStateGroup.Transitions>
-									<VisualTransition GeneratedDuration="0:0:0.2"/>
-								</VisualStateGroup.Transitions>
-								<VisualState x:Name="Normal"/>
-								<VisualState x:Name="MouseOver">
-									<Storyboard>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
-											<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-										</DoubleAnimationUsingKeyFrames>
-									</Storyboard>
-								</VisualState>
-								<VisualState x:Name="Pressed"/>
-								<VisualState x:Name="Disabled"/>
-							</VisualStateGroup>
-						</VisualStateManager.VisualStateGroups>
-						<VisualStateManager.CustomVisualStateManager>
-							<ei:ExtendedVisualStateManager/>
-						</VisualStateManager.CustomVisualStateManager>
-						<Path Data="M-4.1875,-0.3125 L15.0625,18.875" Fill="#FFF4F4F5" Margin="0" Stretch="Fill" Stroke="{TemplateBinding Background}" StrokeThickness="6"/>
-						<Path Data="M20.25,0 L8.8817842E-16,19.1245" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Margin="0" Stretch="Fill" Stroke="{TemplateBinding Background}" Width="Auto" StrokeThickness="6"/>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsKeyboardFocused" Value="true"/>
-						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
-						<Trigger Property="IsEnabled" Value="false">
-							<Setter Property="Foreground" Value="#ADADAD"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-	<Style x:Key="MenuButton" TargetType="{x:Type Button}">
-		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
-		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
-		<Setter Property="BorderThickness" Value="1"/>
-		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center"/>
-		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Padding" Value="1"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Grid>
-						<VisualStateManager.CustomVisualStateManager>
-							<ei:ExtendedVisualStateManager/>
-						</VisualStateManager.CustomVisualStateManager>
-						<VisualStateManager.VisualStateGroups>
-							<VisualStateGroup x:Name="CommonStates" ei:ExtendedVisualStateManager.UseFluidLayout="True">
-								<VisualStateGroup.Transitions>
-									<VisualTransition GeneratedDuration="0:0:0.2"/>
-								</VisualStateGroup.Transitions>
-								<VisualState x:Name="Normal"/>
-								<VisualState x:Name="MouseOver">
-									<Storyboard>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border">
-											<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-										</DoubleAnimationUsingKeyFrames>
-									</Storyboard>
-								</VisualState>
-								<VisualState x:Name="Pressed"/>
-								<VisualState x:Name="Disabled"/>
-							</VisualStateGroup>
-						</VisualStateManager.VisualStateGroups>
-						<Border x:Name="border" BorderBrush="{x:Null}" BorderThickness="0" Margin="0" Width="Auto" CornerRadius="3" Background="{TemplateBinding Background}" Opacity="0"/>
-						<Border BorderBrush="{x:Null}" BorderThickness="0" Margin="0">
-							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-						</Border>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsKeyboardFocused" Value="true"/>
-						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
-						<Trigger Property="IsEnabled" Value="false">
-							<Setter Property="Foreground" Value="#ADADAD"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-	<Style TargetType="{x:Type Button}">
-		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
-		<Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
-		<Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
-		<Setter Property="BorderThickness" Value="1"/>
-		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-		<Setter Property="HorizontalContentAlignment" Value="Center"/>
-		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="Padding" Value="1"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Grid>
-						<VisualStateManager.VisualStateGroups>
-							<VisualStateGroup x:Name="CommonStates" ei:ExtendedVisualStateManager.UseFluidLayout="True">
-								<VisualStateGroup.Transitions>
-									<VisualTransition GeneratedDuration="0:0:0.2"/>
-								</VisualStateGroup.Transitions>
-								<VisualState x:Name="Normal"/>
-								<VisualState x:Name="MouseOver">
-									<Storyboard>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border">
-											<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-										</DoubleAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="border1">
-											<EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
-										</DoubleAnimationUsingKeyFrames>
-									</Storyboard>
-								</VisualState>
-								<VisualState x:Name="Pressed"/>
-								<VisualState x:Name="Disabled"/>
-							</VisualStateGroup>
-						</VisualStateManager.VisualStateGroups>
-						<Border x:Name="border" BorderBrush="{TemplateBinding Foreground}" BorderThickness="1" Background="{TemplateBinding Background}" CornerRadius="3" Opacity="1">
-							<VisualStateManager.CustomVisualStateManager>
-								<ei:ExtendedVisualStateManager/>
-							</VisualStateManager.CustomVisualStateManager>
-							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-						</Border>
-						<Border x:Name="border1" BorderThickness="1" Background="White" Opacity="0" CornerRadius="3"/>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsKeyboardFocused" Value="true"/>
-						<Trigger Property="ToggleButton.IsChecked" Value="true"/>
-						<Trigger Property="IsEnabled" Value="false">
-							<Setter Property="Foreground" Value="#ADADAD"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="CloseButton" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+        <Setter Property="Background" Value="{StaticResource ButtonNormalBackground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid x:Name="grid" Margin="-4.188,-0.312,-0.062,-3.875" Opacity="0.495">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates" ei:ExtendedVisualStateManager.UseFluidLayout="True">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.2"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="grid">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed"/>
+                                <VisualState x:Name="Disabled"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <VisualStateManager.CustomVisualStateManager>
+                            <ei:ExtendedVisualStateManager/>
+                        </VisualStateManager.CustomVisualStateManager>
+                        <Path Data="M-4.1875,-0.3125 L15.0625,18.875" Fill="#FFF4F4F5" Margin="0" Stretch="Fill" Stroke="{TemplateBinding Background}" StrokeThickness="6"/>
+                        <Path Data="M20.25,0 L8.8817842E-16,19.1245" Fill="#FFF4F4F5" HorizontalAlignment="Stretch" Margin="0" Stretch="Fill" Stroke="{TemplateBinding Background}" Width="Auto" StrokeThickness="6"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="true"/>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true"/>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="#ADADAD"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
